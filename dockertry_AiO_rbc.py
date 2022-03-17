@@ -18,7 +18,6 @@
 
 # In[1]:
 
-$ pip install tensorflow
 import tensorflow as tf
 import numpy as np
 from math import sqrt
