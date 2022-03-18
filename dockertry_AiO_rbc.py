@@ -22,7 +22,7 @@ import tensorflow as tf
 import numpy as np
 from math import sqrt
 # from matplotlib import pyplot as plt
-from tqdm import tqdm as tqdm         # tqdm is a nice library to visualize ongoing loops
+# from tqdm import tqdm as tqdm         # tqdm is a nice library to visualize ongoing loops
 import datetime
 # followint lines are used for indicative typing
 from typing import Tuple
@@ -507,7 +507,7 @@ def training_step():
 def train_me(K):
 
     vals = []
-    for k in tqdm(tf.range(K)):
+    for k in tf.range(K):
         val = training_step()
         vals.append(val.numpy())
         
