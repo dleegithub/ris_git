@@ -21,7 +21,7 @@
 import tensorflow as tf
 import numpy as np
 from math import sqrt
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 from tqdm import tqdm as tqdm         # tqdm is a nice library to visualize ongoing loops
 import datetime
 # followint lines are used for indicative typing
