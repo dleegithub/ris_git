@@ -526,10 +526,10 @@ results = train_me(50000)
 # In[18]:
 
 
-plt.plot( np.sqrt(results) )
-plt.xscale('log')
-plt.yscale('log')
-plt.grid()
+# plt.plot( np.sqrt(results) )
+# plt.xscale('log')
+# plt.yscale('log')
+# plt.grid()
 
 
 # In the training graph, one can see that errors are decreasing until they reach $2*10^{-5}$ on average (the errors are volatile both because they depend on a specific random draw and because only two such random draws are used to approximate the expectation function). The numbers in the graph represent the mean of the squared residuals. If we take the square root, we get $5*10^{-3}$ for the $L_2$ norm, wich is still quite accurate approximation for a model with 5 states variables and a kinked solution. We show the constructed decision rule below.
@@ -543,14 +543,14 @@ kvec = np.linspace(kmin, kmax, nk)
 for i,y in enumerate(y_array):
     yvec = np.ones(nk) * y
     ζvec, hvec = dr(yvec,kvec)
-    plt.plot(kvec, ζvec*kvec)
+#     plt.plot(kvec, ζvec*kvec)
     
-plt.title("RBC growth (consumption decision rule)")
-plt.xlabel("$k_t$")
-plt.ylabel("$c_t$")
-plt.ylim(0.30,0.65)
-plt.grid()
-plt.savefig("consumptionrule.pdf")
+# plt.title("RBC growth (consumption decision rule)")
+# plt.xlabel("$k_t$")
+# plt.ylabel("$c_t$")
+# plt.ylim(0.30,0.65)
+# plt.grid()
+# plt.savefig("consumptionrule.pdf")
 
 ζvec0, hvec0 = dr(0*kvec,kvec)
 np.savetxt("AiO_cvec.csv", ζvec0*kvec, fmt='%.6f', delimiter=",")
@@ -563,15 +563,15 @@ for i,y in enumerate(y_array):
     yvec = np.ones(nk) * y
     ζvec, hvec = dr(yvec,kvec)
     knext = np.exp(yvec) * A * kvec**α + (1-δ) * kvec - ζvec*kvec
-    plt.plot(kvec, knext)
+#     plt.plot(kvec, knext)
     
-plt.plot(kvec,kvec,'k--')    
-plt.title("RBC growth (capital decision rule)")
-plt.xlabel("$k_t$")
-plt.ylabel("$k_{t+1}$")
-plt.ylim(0.80,2.20)
-plt.grid()
-plt.savefig("savingrule.pdf")
+# plt.plot(kvec,kvec,'k--')    
+# plt.title("RBC growth (capital decision rule)")
+# plt.xlabel("$k_t$")
+# plt.ylabel("$k_{t+1}$")
+# plt.ylim(0.80,2.20)
+# plt.grid()
+# plt.savefig("savingrule.pdf")
 
 knext0 = np.exp(0*kvec) * A * kvec**α + (1-δ) * kvec - ζvec0*kvec
 np.savetxt("AiO_kvec.csv", knext0, fmt='%.6f', delimiter=",")
