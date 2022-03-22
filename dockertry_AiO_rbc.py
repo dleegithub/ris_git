@@ -23,7 +23,7 @@ import numpy as np
 from math import sqrt
 # from matplotlib import pyplot as plt
 # from tqdm import tqdm as tqdm         # tqdm is a nice library to visualize ongoing loops
-import datetime
+import time
 # followint lines are used for indicative typing
 from typing import Tuple
 class Vector: pass
@@ -516,10 +516,12 @@ def train_me(K):
 
 # In[17]:
 
-
+start = time.time()
 # with writer.as_default():
 results = train_me(50000)
+time_elapsed = time.time() - start
 
+print("Training took", time_elapsed, "seconds.")
 
 # On a modern CPU, optimization should be done within a few minutes. It would be dramatically faster on hardware adapted to deep-learning. To see how the training has performed, we can plot the empirical errors against the number of epochs.
 
