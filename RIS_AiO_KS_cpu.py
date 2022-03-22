@@ -14,8 +14,8 @@
 # In[1]:
 
 
-# import os
-# os.environ["CUDA_VISIBLE_DEVICES"] = "-1" # default run is on CPU
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1" # default run is on CPU
 # comment the above two lines to enable GPU (can be much faster on some machines)
 import tensorflow as tf
 import numpy as np
