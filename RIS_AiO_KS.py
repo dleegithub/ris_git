@@ -575,7 +575,7 @@ for i in range(TRAINING_STEPS):
 # Stop timer
 time_elapsed = time.time() - start
 
-print("Training took", time_elapsed, "seconds.")
+# print("Training took", time_elapsed, "seconds.")
 
 
 # # Decision-rule plot run
