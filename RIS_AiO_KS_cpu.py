@@ -575,7 +575,7 @@ for i in range(TRAINING_STEPS):
 # Stop timer
 time_elapsed = time.time() - start
 
-# print("Training took", time_elapsed, "seconds.")
+print("Training took", time_elapsed, "seconds.")
 
 
 # # Decision-rule plot run
@@ -752,6 +752,7 @@ if simulation_results["k"].shape[2] != 1: # Plot mean if more than one line was 
 ax.title.set_text("Capital simulation")
 
 plt.savefig("KS_RIS.pdf")
+print("Job completed")
 
 # In[ ]:
 
