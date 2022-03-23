@@ -1,4 +1,4 @@
-
+print("0323_a")
 import tensorflow as tf
 print(tf.test.is_gpu_available)
 import numpy as np
