@@ -1,9 +1,9 @@
-print("0323_b")
+print("0323_c")
 import tensorflow as tf
-if not tf.test.is_built_with_cuda():
-    print("not built with cuda")
+# if not tf.test.is_built_with_cuda():
+#     print("not built with cuda")
 import numpy as np
-np.savetxt("testgpu.txt", tf.config.list_physical_devices('GPU'))
+# np.savetxt("testgpu.txt", tf.config.list_physical_devices('GPU'))
 
 
 t1 = [[1, 2, 3], [4, 5, 6]]
